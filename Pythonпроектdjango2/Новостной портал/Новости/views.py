@@ -137,32 +137,3 @@ class NewsDeleteView(DeleteView):
 
 
 
-# class NetView(UpdateView):
-# #     template_name = 'news_edit.html'
-# #     form_class = NewsForm
-# #     success_url wsEdi= '/news/
-# class AddNews(PermissionRequiredMixin, NewsAddView):
-#     permission_required = ('newapp.add_post',)
-#
-#
-# class ChangeNews(PermissionRequiredMixin, NewsEditView):
-#     permission_required = ('newapp.change_post',)
-#
-#
-# class DeleteNews(PermissionRequiredMixin, NewsDeleteView):
-#     permission_required = ('newapp.delete_post',)
-
-
-#
-# class PostsDetail(DetailView):
-#     model = Post
-#     template_name = 'sample_app/news2.html'
-#     context_object_name = 'Post'
-#     queryset = Post.objects.order_by('-dateCreation')
-#
-#
-#    def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['time_now'] = datetime.utcnow()
-#         context['value1'] = None
-#         return context
