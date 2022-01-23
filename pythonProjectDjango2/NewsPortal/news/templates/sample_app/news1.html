@@ -44,7 +44,7 @@ Post
     {% for news1 in Posts %}
     <tr>
         <td>
-            <a href="{% url 'news_detail' news1.id %}"><h5>{{ news1.author|title }}</h5></a>
+            <h5>{{ news1.author|title }}</h5>
             <!-- При нажатии на имя товара в таблице нас теперь будет перекидывать на страницу с самого товара -->
             <a href="{% url 'news_update' news1.id %}"><u><strong><span
                     style="color: #008000;">Редактировать</span></strong></u></a> <!-- добавим ссылку на редактирование товара-->
@@ -65,7 +65,7 @@ Post
             <hr/>
         </td>
         <td>
-            {{ news1.text|truncatechars:50|Censor }}
+            <a href="{% url 'news_detail' news1.id %}">{{ news1.text|truncatechars:50|Censor }}</a>
             <hr/>
         </td>
         <td>
